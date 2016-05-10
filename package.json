@@ -1,0 +1,26 @@
+{
+  "name": "lint-configs",
+  "version": "1.0.0",
+  "description": "A collection of lint config files",
+  "keywords": [
+    "lint",
+    "lintconfigs",
+    "eslint",
+    "eslintconfig"
+  ],
+  "license": "MIT",
+  "author": "Danny Andrews",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danny-andrews/lint-configs.git"
+  },
+  "scripts": {
+    "lint-es6": "eslint -c index.js testfiles/js/es6/badfile.js",
+    "lint": "eslint -c eslintrc-es5.js testfiles/js/es5/badfile.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.9.0"
+  }
+}
