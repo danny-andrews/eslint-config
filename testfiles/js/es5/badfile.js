@@ -1,8 +1,8 @@
 /* Best Practices */
 
 // no-implicit-globals
-var k = 2; // eslint-disable-line no-unused-vars
-/* eslint-disable no-implicit-globals, no-redeclare */
+var k = 2;
+/* eslint-disable no-implicit-globals, no-redeclare, no-unused-vars */
 
 // no-caller
 function foo() {
@@ -11,7 +11,7 @@ function foo() {
 }
 
 // no-useless-call
-foo.call(undefined, 1, 2);
+foo.call(null, 1, 2);
 
 // vars-on-top
 function foo() {
@@ -35,8 +35,13 @@ function foo() {
 // init-declarations
 function foo() {
   'use strict';
-  var k;
-  return k;
+  var l;
+}
+
+// no-undefined
+function foo() {
+  'use strict';
+  var l = undefined;
 }
 
 foo();

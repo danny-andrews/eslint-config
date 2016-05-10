@@ -16,8 +16,9 @@
     "url": "git+https://github.com/danny-andrews/lint-configs.git"
   },
   "scripts": {
+    "lint": "eslint -c eslintrc-es5.js testfiles/js/es5/badfile.js",
     "lint-es6": "eslint -c index.js testfiles/js/es6/badfile.js",
-    "lint": "eslint -c eslintrc-es5.js testfiles/js/es5/badfile.js"
+    "lint-node": "eslint -c eslintrc-node.js testfiles/js/node/badfile.js"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",

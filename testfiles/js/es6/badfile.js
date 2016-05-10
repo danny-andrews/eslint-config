@@ -400,20 +400,30 @@ if('2' === bar) {
 
 /* Variables */
 
-// no-catch-shadow
-try {
-  throw new Error('problem');
-}
-catch(bar) {
-  if(bar) {
-    return 2;
-  }
-}
-
 // no-shadow
 function foo() { // eslint-disable-line no-redeclare
-  
+  const bar = 2;
+  return bar;
 }
+
+// no-shadow-restricted-names
+function NaN() {
+  return 1;
+}
+
+// no-undef
+b = 10;
+
+// no-unused-vars
+const k = 2;
+
+// no-use-before-define
+if(bool) {
+  return l;
+}
+const l = 1;
+
+/* Stylistic Issues */
 
 return (function() {
   foo();

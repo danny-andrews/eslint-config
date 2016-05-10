@@ -65,17 +65,14 @@ module.exports = {
     'vars-on-top': 'error',
     'wrap-iife': ['error', 'inside'],
     yoda: 'error',
-
-
-    'no-undef-init': 'error',
-    'no-use-before-define': 'error',
-
-
     // Strict
     strict: 'error',
     // Variables
     'init-declarations': 'error',
-    'no-catch-shadow': 'error',
+    'no-shadow': 'error',
+    'no-shadow-restricted-names': 'error',
+    'no-undefined': 'error',
+    'no-use-before-define': 'error',
     // Stylistic Issues
     'array-bracket-spacing': 'error',
     'block-spacing': 'error',
