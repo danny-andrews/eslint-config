@@ -1,5 +1,5 @@
 import test from 'ava';
-import {verifyLintResults} from './test-helpers';
+import {verifyLintResults} from './helpers/linting-helpers';
 
 const TEST_FILE = '../../testfiles/js/es6/badfile.js';
 const ERR_COUNT = 183;
