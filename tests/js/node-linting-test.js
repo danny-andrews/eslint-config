@@ -1,19 +1,16 @@
 import test from 'ava';
 import {verifyLintResults} from './test-helpers';
 
-const TEST_FILE = '../../testfiles/js/es5/badfile.js';
+const TEST_FILE = '../../testfiles/js/node/badfile.js';
 const ERR_COUNT = 7;
 const REQUIRED_RULES = [
-  // Best Practices
-  'no-caller',
-  'no-implicit-globals',
-  'no-useless-call',
-  'vars-on-top',
-  // Strict
-  'strict',
-  // Stylistic Issues
-  'one-var',
-  'one-var-declaration-per-line'
+  'callback-return',
+  'handle-callback-err',
+  'no-mixed-requires',
+  'no-new-require',
+  'no-path-concat',
+  'no-process-env',
+  'no-process-exit'
 ];
 
 test('lints stuff correctly', t => {

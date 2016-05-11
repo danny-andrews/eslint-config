@@ -1,8 +1,9 @@
-import {CLIEngine} from 'eslint';
 import test from 'ava';
+import {verifyLintResults} from './test-helpers';
 
+const TEST_FILE = '../../testfiles/js/es6/badfile.js';
 const ERR_COUNT = 183;
-const REQUIRED_RULE_IDS = [
+const REQUIRED_RULES = [
   // Possible Errors
   'no-cond-assign',
   'no-extra-parens',
@@ -135,40 +136,11 @@ const REQUIRED_RULE_IDS = [
 ];
 
 // Not included: jsx-quotes, line-endings, no-mixed-spaces-and-tabs
-
-let errResults = null;
-let errResultsByRuleId = null;
-
-test.beforeEach(() => {
-  const cli = new CLIEngine();
-  const report = cli.executeOnFiles(['../../testfiles/js/es6/badfile.js']);
-  errResults = CLIEngine.getErrorResults(report.results)[0].messages;
-  errResultsByRuleId = errResults.reduce((prevVal, val) => {
-    prevVal[val.ruleId] = prevVal[val.ruleId]
-      ? prevVal[val.ruleId].concat(val)
-      : [val];
-    return prevVal;
-  }, {});
-});
-
 test('lints stuff correctly', t => {
-  t.is(errResults.length, ERR_COUNT);
-
-  REQUIRED_RULE_IDS.forEach(rule => {
-    let ruleId = rule;
-    let infractionCount = 1;
-    if(typeof rule === 'object') {
-      ruleId = rule[0];
-      infractionCount = rule[1];
-    }
-    t.truthy(
-      errResultsByRuleId[ruleId],
-      `Expected ruleId: ${ruleId} to be in error list`
-    );
-    t.is(
-      errResultsByRuleId[ruleId].length,
-      infractionCount,
-      `Expected ruleId: ${ruleId} to be in error list ${infractionCount} times`
-    );
+  verifyLintResults({
+    testFile: TEST_FILE,
+    errCount: ERR_COUNT,
+    requiredRules: REQUIRED_RULES,
+    t
   });
 });

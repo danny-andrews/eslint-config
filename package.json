@@ -27,9 +27,8 @@
     "eslint": "^2.9.0"
   },
   "ava": {
-    "files": [
-      "tests/js/**/*-test.js"
-    ],
-    "verbose": true
+    "files": ["tests/js/**/*-test.js"],
+    "verbose": true,
+    "require": ["babel-register"]
   }
 }
