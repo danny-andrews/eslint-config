@@ -16,16 +16,19 @@ module.exports = {
     'no-class-assign': 'error',
     'no-confusing-arrow': 'error',
     'no-duplicate-imports': 'error',
+    'no-this-before-super': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-constructor': 'error',
     'no-var': 'error',
     'object-shorthand': 'error',
+    'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'require-yield': 'error',
     'sort-imports': ['error', {ignoreCase: true}],
-    'template-curly-spacing': 'error'
+    'template-curly-spacing': 'error',
+    'yield-star-spacing': ['error', 'both']
   }
 };

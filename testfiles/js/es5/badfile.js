@@ -44,4 +44,19 @@ function foo() {
   var l = undefined;
 }
 
+/* Stylistic Issues */
+
+// one-var
+function foo() {
+  'use strict';
+  var m = 2;
+  var n = 1;
+}
+
+// one-var-declaration-per-line
+function foo() {
+  'use strict';
+  var m = 2, n = 1;
+}
+
 foo();

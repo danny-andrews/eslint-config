@@ -1,3 +1,13 @@
+/* eslint-disable no-unused-vars */
+// no-duplicate-imports
+import {otherThing} from 'other-thing';
+import {thing} from 'other-thing';
+
+// sort-imports
+import z from 'z';
+import y from 'y';
+/* eslint-enable no-unused-vars */
+
 const number = 7;
 let obj = {};
 let bar = {};
@@ -425,8 +435,340 @@ const l = 1;
 
 /* Stylistic Issues */
 
+// array-bracket-spacing
+bar = [ 1 ];
+
+// block-spacing
+if(bool) {return true;}
+
+// camelcase
+const djs_klds = 3; // eslint-disable-line no-unused-vars
+
+// comma-spacing
+array = [1 ,2];
+
+// comma-style
+array = [1
+  , 2];
+
+// computed-property-spacing
+bar = obj[ bar ];
+
+// consistent-this
+bar = this;
+
+// func-style
+const func = function() {
+  return 1;
+};
+
+// indent
+  bar = 2;
+
+// key-spacing
+obj = {d :3};
+obj = {
+  d :3
+};
+
+// keyword-spacing
+if (bool) {
+  return 1;
+}
+for (bar; bar < 1; bar++) {
+  return 2;
+}
+while (bool) {
+  bool = !bool;
+}
+switch (string) {
+case '1':
+  break;
+}
+try {
+  throw new Error('ahhh');
+}
+catch (e) {
+  bar = e;
+}
+
+// max-depth
+if(bool) {
+  if(bool) {
+    if(bool) {
+      if(bool) {
+        return 1;
+      }
+    }
+  }
+}
+
+// max-len
+// This comment is way to long, and should be broken over a few different lines to make it readable
+
+// max-nested-callbacks
+foo(function() {
+  bar(function() {
+    return true;
+  });
+});
+
+// max-params
+function foo(a, b, c, d) { // eslint-disable-line no-redeclare, no-unused-vars
+  return 1;
+}
+
+// max-statements
+function foo() { // eslint-disable-line no-redeclare
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+  bar++;
+}
+
+// max-statements-per-line
+const thing1 = 2; const thing2 = 1; // eslint-disable-line no-unused-vars
+
+// new-cap
+/* eslint-disable no-undef */
+bar = Blah();
+bar = new blah();
+/* eslint-enable no-undef */
+
+// new-parens
+bar = new Error;
+
+// no-array-constructor
+bar = Array(0, 1, 2);
+
+// no-bitwise
+bar = 2 | 1;
+
+// no-continue
+for(bar = 0; bar < 2; bar++) {
+  if(bar >= 1) {
+    continue;
+  }
+  bar += bar;
+}
+
+// no-inline-comments
+bar = 2; // bad comment
+
+// no-lonely-if
+if(bool) {
+  bar = 2;
+}
+else {
+  if(bool) {
+    return 1;
+  }
+}
+
+// no-multiple-empty-lines
+
+
+// no-negated-condition
+if(!bool) {
+  bar = 1;
+}
+else {
+  bar = 2;
+}
+
+// no-nested-ternary
+bar = bar ? 1 : bar === 2 ? 2 : 0;
+
+// no-new-object
+bar = new Object();
+
+// no-spaced-func
+foo ();
+
+// no-trailing-spaces
+bar = 2; 
+
+// no-underscore-dangle
+const _lk = 2; // eslint-disable-line no-unused-vars
+
+// no-unneeded-ternay
+bool = bool === 1 ? true : false;
+
+// no-whitespace-before-property
+bar = obj .ok;
+
+// object-curly-spacing
+bar = { a: 1 };
+
+// operator-assignment
+bar = bar + 1;
+
+// operator-linebreak
+bar = 1 +
+  2;
+
+// padded-blocks
+if(bool) {
+
+  return 2;
+
+}
+
+// quote-props
+obj = {'a': 3};
+
+// quotes
+bar = "2";
+bar = "'2'";
+
+// semi
+bar = 2
+
+// semi-spacing
+bar = 2 ;
+
+// space-before-blocks
+if(bool){
+  return 2;
+}
+
+// space-before-function-paren
+function foo () { // eslint-disable-line no-redeclare
+  return 2;
+}
+
+// space-in-parens
+foo( 1 );
+
+// space-infix-opts
+bar = 1+2;
+
+// space-unary-opts
+bar = bar ++;
+
+// spaced-comment
+/*Not spaced */
+
+/* ES6 */
+
+// arrow-body-style
+bar = () => { return 2; };
+
+// arrow-parens
+bar = (a) => 2;
+
+// arrow-spacing
+bar = ()=>{
+  bar = 2;
+  return bar;
+};
+
+// constructor-super
+class A { // eslint-disable-line no-unused-vars
+  constructor() {
+    super();
+  }
+}
+
+// generator-star-spacing
+function*foo() { // eslint-disable-line no-redeclare
+  yield 2;
+}
+
+// no-class-assign
+A = 2;
+
+// no-confusing-arrow
+bar = d => bar === 1 ? 2 : d;
+
+// no-const-assign
+number = 2;
+
+// no-dupe-class-members
+class G { // eslint-disable-line no-unused-vars
+  bar() {
+    return 1;
+  }
+  bar() {
+    return 2;
+  }
+}
+
+// no-new-symbol
+bar = new Symbol('thing');
+
+// this-before-super
+class K extends G { // eslint-disable-line no-unused-vars
+  constructor() {
+    this.l = 1;
+    super();
+  }
+}
+
+// no-useless-computed-key
+obj = {['k']: 2};
+
+// no-useless-constructor
+class M extends G { // eslint-disable-line no-unused-vars
+  constructor() {
+    super();
+  }
+}
+
+// no-var
+var lk = 2; // eslint-disable-line no-unused-vars, vars-on-top
+
+// object-shorthand
+obj = {bar: bar};
+obj = {
+  k: function() {
+    return 2;
+  }
+};
+
+// prefer-arrow-callback
+foo(function(a) { return a; });
+
+// prefer-const
+let neverChanges = 2; // eslint-disable-line no-unused-vars
+
+// prefer-rest-params
+function foo() { // eslint-disable-line no-redeclare
+  return arguments;
+}
+
+// prefer-spread
+array = [1, 2];
+Math.max.apply(Math, array);
+
+// prefer-template
+bar = 'ok';
+bar = string + 'ok';
+
+// require-yield
+function * foo() { // eslint-disable-line no-redeclare
+  return 2;
+}
+
+// template-curly-spacing
+bar = `${ bar } hi`;
+
+// yield-star-spacing
+function * foo() {  // eslint-disable-line no-redeclare
+  yield*bar();
+}
+
 return (function() {
   foo();
   foo2();
   return {obj, regexp, array};
 })();
+
+// eol-last
