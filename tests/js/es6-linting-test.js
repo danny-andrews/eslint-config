@@ -40,7 +40,6 @@ const REQUIRED_RULES = [
   'dot-location',
   'dot-notation',
   'eqeqeq',
-  'guard-for-in',
   'no-alert',
   'no-case-declarations',
   'no-div-regex',

@@ -5,15 +5,15 @@ import test from 'ava';
 
 function lintFile(filepath) {
   const results = new CLIEngine().executeOnFiles([filepath]).results;
-  const infractionCounts = CLIEngine.getErrorResults(results)[0]
-    .messages
-    .reduce((prevVal, val) => {
-      prevVal[val.ruleId] = prevVal[val.ruleId]
-        ? prevVal[val.ruleId] + 1
-        : 1;
+  const errors = CLIEngine.getErrorResults(results);
+  const errorMessages = errors[0] ? errors[0].messages : [];
+  const infractionCounts = errorMessages.reduce((prevVal, val) => {
+    prevVal[val.ruleId] = prevVal[val.ruleId]
+      ? prevVal[val.ruleId] + 1
+      : 1;
 
-      return prevVal;
-    }, {});
+    return prevVal;
+  }, {});
 
   return infractionCounts;
 }

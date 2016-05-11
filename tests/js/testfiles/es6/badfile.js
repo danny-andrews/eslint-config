@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars, no-redeclare, import/no-unresolved */
 // no-duplicate-imports
 import {otherThing} from 'other-thing';
 import {thing} from 'other-thing';
@@ -6,7 +6,6 @@ import {thing} from 'other-thing';
 // sort-imports
 import z from 'z';
 import y from 'y';
-/* eslint-disable no-redeclare */
 
 const number = 7;
 let obj = {};
@@ -239,11 +238,6 @@ obj = obj['thing'];
 
 // eqeqeq
 bool = bool == null;
-
-// guard-for-in
-for(string in obj) {
-  foo();
-}
 
 // no-alert
 alert('hi');

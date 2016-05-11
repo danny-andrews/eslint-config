@@ -1,0 +1,182 @@
+
+/Users/dannya/Projects/Personal/eslint-config/tests/js/testfiles/es6/badfile.js
+    4:1   error  'other-thing' import is duplicated                                                             no-duplicate-imports
+    8:1   error  Imports should be sorted alphabetically                                                        sort-imports
+   25:14  error  Unexpected trailing comma                                                                      comma-dangle
+   29:1   error  Unexpected assignment within an 'if' statement                                                 no-cond-assign
+   34:1   error  Unexpected console statement                                                                   no-console
+   37:1   error  Unexpected constant condition                                                                  no-constant-condition
+   42:21  error  Unexpected control character in regular expression                                             no-control-regex
+   45:1   error  Unexpected 'debugger' statement                                                                no-debugger
+   51:3   error  Duplicate key 'a'                                                                              no-dupe-keys
+   60:1   error  Duplicate case label                                                                           no-duplicate-case
+   65:9   error  Empty block statement                                                                          no-empty
+   68:7   error  Empty class                                                                                    no-empty-character-class
+   75:3   error  Do not assign to the exception parameter                                                       no-ex-assign
+   79:4   error  Redundant Boolean call                                                                         no-extra-boolean-cast
+   84:7   error  Gratuitous parentheses around expression                                                       no-extra-parens
+   87:10  error  Unnecessary semicolon                                                                          no-extra-semi
+   90:1   error  'func' is a function                                                                           no-func-assign
+   97:5   error  Move function declaration to function body root                                                no-inner-declarations
+  105:10  error  Invalid regular expression: /[/: Unterminated character class                                  no-invalid-regexp
+  108:9   error  Irregular whitespace not allowed                                                               no-irregular-whitespace
+  113:4   error  The 'in' expression's left operand is negated                                                  no-negated-in-lhs
+  118:1   error  'Math' is not a function                                                                       no-obj-calls
+  121:10  error  Spaces are hard to count. Use {3}                                                              no-regex-spaces
+  124:9   error  Unexpected comma in middle of array                                                            no-sparse-arrays
+  128:3   error  Unexpected newline between object and [ of property access                                     no-unexpected-multiline
+  133:3   error  Unreachable code                                                                               no-unreachable
+  142:5   error  Unsafe usage of ReturnStatement                                                                no-unsafe-finally
+  147:4   error  Use the isNaN function to compare with NaN                                                     use-isnan
+  152:1   error  Missing JSDoc @returns for function                                                            valid-jsdoc
+  161:20  error  Invalid typeof comparison value                                                                valid-typeof
+  168:7   error  Getter is not present                                                                          accessor-pairs
+  175:16  error  Expected to return a value in this function                                                    array-callback-return
+  182:1   error  Function 'foo' has a complexity of 11                                                          complexity
+  226:3   error  Expected a return value                                                                        consistent-return
+  230:1   error  Expected { after 'if' condition                                                                curly
+  233:16  error  Expected dot to be on same line as property                                                    dot-location
+  237:11  error  ["thing"] is better written in dot notation                                                    dot-notation
+  240:13  error  Expected '===' and instead saw '=='                                                            eqeqeq
+  243:1   error  Unexpected alert                                                                               no-alert
+  247:1   error  Unexpected lexical declaration in case block                                                   no-case-declarations
+  253:10  error  A regular expression literal can be confused with '/='                                         no-div-regex
+  260:8   error  Unexpected 'else' after 'return'                                                               no-else-return
+  266:16  error  Unexpected empty function                                                                      no-empty-function
+  269:7   error  Unexpected empty object pattern                                                                no-empty-pattern
+  272:1   error  eval can be harmful                                                                            no-eval
+  275:1   error  Object prototype is read only, properties should not be added                                  no-extend-native
+  280:4   error  The function binding is unnecessary                                                            no-extra-bind
+  283:7   error  A leading decimal point can be confused with a dot                                             no-floating-decimal
+  286:7   error  use `Boolean(bool)` instead                                                                    no-implicit-coercion
+  289:1   error  Implied eval. Consider passing a function instead of a string                                  no-implied-eval
+  293:1   error  Reserved name '__iterator__'                                                                   no-iterator
+  299:1   error  Unexpected labeled statement                                                                   no-labels
+  304:1   error  Block is redundant                                                                             no-lone-blocks
+  310:9   error  Don't make functions within a loop                                                             no-loop-func
+  316:7   error  No magic number: 2343                                                                          no-magic-numbers
+  320:6   error  Multiple spaces found before '='                                                               no-multi-spaces
+  323:7   error  Multiline support is limited to browsers supporting ES5 only                                   no-multi-str
+  327:1   error  String is a read-only native object                                                            no-native-reassign
+  330:1   error  Do not use 'new' for side effects                                                              no-new
+  333:7   error  The Function constructor is eval                                                               no-new-func
+  336:7   error  Do not use String as a constructor                                                             no-new-wrappers
+  340:3   error  Assignment to function parameter 'param1'                                                      no-param-reassign
+  345:7   error  The '__proto__' property is deprecated                                                         no-proto
+  349:10  error  'foo' is already defined                                                                       no-redeclare
+  356:3   error  Return statement should not contain assignment                                                 no-return-assign
+  360:17  error  Script URL is a form of eval                                                                   no-script-url
+  363:7   error  'bar' is assigned to itself                                                                    no-self-assign
+  366:7   error  Comparing to itself is potentially pointless                                                   no-self-compare
+  369:12  error  Unexpected use of comma operator                                                               no-sequences
+  373:3   error  Expected an object to be thrown                                                                no-throw-literal
+  377:7   error  'bool' is not modified in this loop                                                            no-unmodified-loop-condition
+  382:1   error  Expected an assignment or function call and instead saw an expression                          no-unused-expressions
+  386:12  error  Unexpected string concatenation of literals                                                    no-useless-concat
+  389:8   error  Unnecessary escape character: \:                                                               no-useless-escape
+  393:10  error  Expected 'undefined' and instead saw 'void'                                                    no-void
+  397:7   error  Missing radix parameter                                                                        radix
+  400:7   error  Wrap an immediate function invocation in parentheses                                           wrap-iife
+  405:4   error  Expected literal to be on the right side of ===                                                yoda
+  412:5   error  Variable 'blah' should be initialized on declaration                                           init-declarations
+  416:9   error  'bar' is already declared in the upper scope                                                   no-shadow
+  421:10  error  Shadowing of global property 'NaN'                                                             no-shadow-restricted-names
+  426:1   error  'b' is not defined                                                                             no-undef
+  429:11  error  Unexpected use of undefined                                                                    no-undefined
+  433:7   error  'k' is defined but never used                                                                  no-unused-vars
+  438:10  error  'l' was used before it was defined                                                             no-use-before-define
+  445:7   error  There should be no space after '['                                                             array-bracket-spacing
+  445:11  error  There should be no space before ']'                                                            array-bracket-spacing
+  448:10  error  Requires a space after '{'                                                                     block-spacing
+  448:23  error  Requires a space before '}'                                                                    block-spacing
+  453:8   error  Closing curly brace appears on the same line as the subsequent block                           brace-style
+  458:7   error  Identifier 'djs_klds' is not in camel case                                                     camelcase
+  461:12  error  There should be no space before ','                                                            comma-spacing
+  461:12  error  A space is required after ','                                                                  comma-spacing
+  465:4   error  ',' should be placed last                                                                      comma-style
+  468:10  error  There should be no space after '['                                                             computed-property-spacing
+  468:16  error  There should be no space before ']'                                                            computed-property-spacing
+  471:1   error  Unexpected alias 'bar' for 'this'                                                              consistent-this
+  474:7   error  Expected a function declaration                                                                func-style
+  479:3   error  Expected indentation of 0 space characters but found 2                                         indent
+  482:8   error  Extra space after key 'd'                                                                      key-spacing
+  482:11  error  Missing space before value for key 'd'                                                         key-spacing
+  484:3   error  Extra space after key 'd'                                                                      key-spacing
+  484:6   error  Missing space before value for key 'd'                                                         key-spacing
+  488:1   error  Unexpected space(s) after "if"                                                                 keyword-spacing
+  491:1   error  Unexpected space(s) after "for"                                                                keyword-spacing
+  494:1   error  Unexpected space(s) after "while"                                                              keyword-spacing
+  497:1   error  Unexpected space(s) after "switch"                                                             keyword-spacing
+  504:1   error  Unexpected space(s) after "catch"                                                              keyword-spacing
+  512:7   error  Blocks are nested too deeply (4)                                                               max-depth
+  520:1   error  Line 520 exceeds the maximum line length of 80                                                 max-len
+  525:9   error  Too many nested callbacks (3). Maximum allowed is 2                                            max-nested-callbacks
+  530:1   error  This function has too many parameters (4). Maximum allowed is 3                                max-params
+  535:1   error  This function has too many statements (11). Maximum allowed is 10                              max-statements
+  550:19  error  This line has too many statements. Maximum allowed is 1                                        max-statements-per-line
+  554:7   error  A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
+  555:11  error  A constructor name should not start with a lowercase letter                                    new-cap
+  559:7   error  Missing '()' invoking a constructor                                                            new-parens
+  562:7   error  The array literal notation [] is preferrable                                                   no-array-constructor
+  565:7   error  Unexpected use of '|'                                                                          no-bitwise
+  570:5   error  Unexpected use of continue statement                                                           no-continue
+  576:10  error  Unexpected comment inline with code                                                            no-inline-comments
+  583:3   error  Unexpected if as the only statement in an else block                                           no-lonely-if
+  590:2   error  More than 1 blank line not allowed                                                             no-multiple-empty-lines
+  592:1   error  Unexpected negated condition                                                                   no-negated-condition
+  600:7   error  Do not nest ternary expressions                                                                no-nested-ternary
+  603:7   error  The object literal notation {} is preferrable                                                  no-new-object
+  606:1   error  Unexpected space between function name and paren                                               no-spaced-func
+  609:9   error  Trailing spaces not allowed                                                                    no-trailing-spaces
+  612:7   error  Unexpected dangling '_' in '_lk'                                                               no-underscore-dangle
+  615:21  error  Unnecessary use of boolean literals in conditional expression                                  no-unneeded-ternary
+  618:7   error  Unexpected whitespace before property ok                                                       no-whitespace-before-property
+  621:7   error  There should be no space after '{'                                                             object-curly-spacing
+  621:14  error  There should be no space before '}'                                                            object-curly-spacing
+  624:1   error  Assignment can be replaced with operator assignment                                            operator-assignment
+  627:10  error  '+' should be placed at the beginning of the line                                              operator-linebreak
+  631:10  error  Block must not be padded by blank lines                                                        padded-blocks
+  635:1   error  Block must not be padded by blank lines                                                        padded-blocks
+  638:8   error  Unnecessarily quoted property 'a' found                                                        quote-props
+  641:7   error  Strings must use singlequote                                                                   quotes
+  645:8   error  Missing semicolon                                                                              semi
+  648:9   error  Unexpected whitespace before semicolon                                                         semi-spacing
+  651:9   error  Missing space before opening brace                                                             space-before-blocks
+  656:13  error  Unexpected space before function parentheses                                                   space-before-function-paren
+  661:4   error  There should be no spaces inside this paren                                                    space-in-parens
+  661:8   error  There should be no spaces inside this paren                                                    space-in-parens
+  664:8   error  Infix operators must be spaced                                                                 space-infix-ops
+  667:7   error  Unexpected space before unary operator '++'                                                    space-unary-ops
+  670:1   error  Expected space or tab after '/*' in comment                                                    spaced-comment
+  675:13  error  Unexpected block statement surrounding arrow body                                              arrow-body-style
+  678:7   error  Unexpected parentheses around single function argument                                         arrow-parens
+  681:8   error  Missing space before =>                                                                        arrow-spacing
+  681:11  error  Missing space after =>                                                                         arrow-spacing
+  689:5   error  Unexpected 'super()'                                                                           constructor-super
+  694:9   error  Missing space after *                                                                          generator-star-spacing
+  694:9   error  Missing space before *                                                                         generator-star-spacing
+  699:1   error  'A' is a class                                                                                 no-class-assign
+  702:7   error  Arrow function used ambiguously with a conditional expression                                  no-confusing-arrow
+  705:1   error  'number' is constant                                                                           no-const-assign
+  712:3   error  Duplicate name 'bar'                                                                           no-dupe-class-members
+  718:11  error  `Symbol` cannot be called as a constructor                                                     no-new-symbol
+  723:5   error  'this' is not allowed before 'super()'                                                         no-this-before-super
+  729:8   error  Unnecessarily computed property ['k'] found                                                    no-useless-computed-key
+  733:3   error  Useless constructor                                                                            no-useless-constructor
+  739:1   error  Unexpected var, use let or const instead                                                       no-var
+  742:8   error  Expected property shorthand                                                                    object-shorthand
+  744:3   error  Expected method shorthand                                                                      object-shorthand
+  750:5   error  Unexpected function expression                                                                 prefer-arrow-callback
+  753:5   error  'neverChanges' is never reassigned, use 'const' instead                                        prefer-const
+  757:10  error  Use the rest parameters instead of 'arguments'                                                 prefer-rest-params
+  762:1   error  use the spread operator instead of the '.apply()'                                              prefer-spread
+  766:7   error  Unexpected string concatenation                                                                prefer-template
+  769:1   error  This generator function does not have 'yield'                                                  require-yield
+  774:8   error  Unexpected space(s) after '${'                                                                 template-curly-spacing
+  774:15  error  Unexpected space(s) before '}'                                                                 template-curly-spacing
+  778:8   error  Missing space after *                                                                          yield-star-spacing
+  778:8   error  Missing space before *                                                                         yield-star-spacing
+  787:2   error  Newline required at end of file but not found                                                  eol-last
+
+✖ 177 problems (177 errors, 0 warnings)
+

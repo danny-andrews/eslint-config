@@ -17,10 +17,10 @@ foo.call(null, 1, 2);
 function foo() {
   'use strict';
   if(k) {
-    var d = 2;
+    var d = 2; // eslint-disable-line no-inner-declarations
   }
 
-  return d;
+  return 1;
 }
 
 /* Strict */

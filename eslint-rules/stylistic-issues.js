@@ -1,0 +1,67 @@
+module.exports = {
+  rules: {
+    'array-bracket-spacing': 'error',
+    'block-spacing': 'error',
+    'brace-style': ['error', 'stroustrup', {allowSingleLine: true}],
+    camelcase: 'error',
+    'comma-spacing': 'error',
+    'comma-style': 'error',
+    'computed-property-spacing': 'error',
+    'consistent-this': 'error',
+    'eol-last': 'error',
+    'func-style': ['error', 'declaration', {allowArrowFunctions: true}],
+    'jsx-quotes': 'error',
+    indent: ['error', 2],
+    'key-spacing': 'error',
+    'keyword-spacing': [
+      'error',
+      {
+        overrides: {
+          if: {after: false},
+          for: {after: false},
+          while: {after: false},
+          switch: {after: false},
+          catch: {after: false}
+        }
+      }
+    ],
+    'linebreak-style': 'error',
+    'max-depth': ['error', 3],
+    'max-len': ['error', 80], // eslint-disable-line no-magic-numbers
+    'max-nested-callbacks': ['error', 2],
+    'max-params': 'error',
+    'max-statements': 'error',
+    'max-statements-per-line': 'error',
+    'new-cap': 'error',
+    'new-parens': 'error',
+    'no-array-constructor': 'error',
+    'no-bitwise': 'error',
+    'no-continue': 'error',
+    'no-inline-comments': 'error',
+    'no-lonely-if': 'error',
+    'no-mixed-spaces-and-tabs': 'error',
+    'no-multiple-empty-lines': ['error', {max: 1}],
+    'no-negated-condition': 'error',
+    'no-nested-ternary': 'error',
+    'no-new-object': 'error',
+    'no-spaced-func': 'error',
+    'no-trailing-spaces': 'error',
+    'no-underscore-dangle': ['error', {allowAfterThis: true}],
+    'no-unneeded-ternary': 'error',
+    'no-whitespace-before-property': 'error',
+    'object-curly-spacing': ['error', 'never'],
+    'operator-assignment': 'error',
+    'operator-linebreak': ['error', 'before'],
+    'padded-blocks': ['error', 'never'],
+    'quote-props': ['error', 'as-needed'],
+    quotes: ['error', 'single', {avoidEscape: true}],
+    semi: ['error', 'always'],
+    'semi-spacing': 'error',
+    'space-before-blocks': 'error',
+    'space-before-function-paren': ['error', 'never'],
+    'space-in-parens': 'error',
+    'space-infix-ops': 'error',
+    'space-unary-ops': 'error',
+    'spaced-comment': 'error'
+  }
+};
