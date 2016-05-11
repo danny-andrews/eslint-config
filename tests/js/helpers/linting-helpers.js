@@ -1,40 +1,58 @@
 /* eslint-env node */
 /* eslint-disable prefer-arrow-callback */
 import {CLIEngine} from 'eslint';
+import test from 'ava';
 
 function lintFile(filepath) {
-  const cli = new CLIEngine();
-  const report = cli.executeOnFiles([filepath]);
-  const errResults = CLIEngine.getErrorResults(report.results)[0].messages;
-  const errResultsByRuleId = errResults.reduce(function(prevVal, val) {
-    prevVal[val.ruleId] = prevVal[val.ruleId]
-      ? prevVal[val.ruleId].concat(val)
-      : [val];
-    return prevVal;
-  }, {});
-  return {errResults, errResultsByRuleId};
+  const results = new CLIEngine().executeOnFiles([filepath]).results;
+  const infractionCounts = CLIEngine.getErrorResults(results)[0]
+    .messages
+    .reduce((prevVal, val) => {
+      prevVal[val.ruleId] = prevVal[val.ruleId]
+        ? prevVal[val.ruleId] + 1
+        : 1;
+
+      return prevVal;
+    }, {});
+
+  return infractionCounts;
 }
 
 export function verifyLintResults(opts = {}) {
-  const {testFile, errCount, requiredRules, t} = opts;
-  const {errResults, errResultsByRuleId} = lintFile(testFile);
-  t.is(errResults.length, errCount);
-
-  requiredRules.forEach(rule => {
-    let ruleId = rule;
-    let infractionCount = 1;
-    if(typeof rule === 'object') {
-      ruleId = rule[0];
-      infractionCount = rule[1];
+  const {testFile, requiredRules} = opts;
+  const expInfractionCounts = requiredRules.reduce((acc, val) => {
+    if(typeof val === 'object') {
+      acc[val[0]] = val[1];
     }
-    t.truthy(
-      errResultsByRuleId[ruleId],
-      `Expected ruleId: ${ruleId} to be in error list`
-    );
+    else {
+      acc[val] = 1;
+    }
+
+    return acc;
+  }, {});
+
+  const actualInfractionCounts = lintFile(testFile);
+  const expRuleIds = Object.keys(expInfractionCounts);
+  const extraneousRuleIds = Object.keys(actualInfractionCounts)
+    .filter(ruleId => !expInfractionCounts[ruleId]);
+
+  expRuleIds.forEach(ruleId => {
+    const expInfractionCount = expInfractionCounts[ruleId];
+    const actualInfractionCount = actualInfractionCounts[ruleId];
+    test(`lints ${ruleId} correctly`, t => {
+      t.is(
+        actualInfractionCount,
+        expInfractionCount,
+        `Expected ruleId: ${ruleId} to be in error list ${expInfractionCount} `
+          + `times but was found ${actualInfractionCount} times`
+      );
+    });
+  });
+  test('has no extraneous rule infractions', t => {
     t.is(
-      errResultsByRuleId[ruleId].length,
-      infractionCount,
-      `Expected ruleId: ${ruleId} to be in error list ${infractionCount} times`
+      extraneousRuleIds.length,
+      0,
+      `Unexpected rule infraction(s) detected: ${extraneousRuleIds.join(', ')}`
     );
   });
 }

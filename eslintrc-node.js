@@ -1,5 +1,6 @@
 /* eslint-env node */
 module.exports = {
+  root: true,
   env: {node: true},
   rules: {
     'callback-return': 'error',

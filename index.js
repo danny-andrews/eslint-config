@@ -1,5 +1,6 @@
 /* eslint-env node */
 module.exports = {
+  root: true,
   extends: './eslintrc-es5.js',
   parser: 'babel-eslint',
   parserOptions: {

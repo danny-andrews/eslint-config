@@ -1,28 +1,52 @@
-import test from 'ava';
 import {verifyLintResults} from './helpers/linting-helpers';
 
-const TEST_FILE = '../../testfiles/js/es6/badfile.js';
-const ERR_COUNT = 183;
+const TEST_FILE = './testfiles/es6/badfile.js';
 const REQUIRED_RULES = [
   // Possible Errors
+  'comma-dangle',
   'no-cond-assign',
+  'no-console',
+  'no-constant-condition',
+  'no-control-regex',
+  'no-debugger',
+  'no-dupe-keys',
+  'no-duplicate-case',
+  'no-empty',
+  'no-empty-character-class',
+  'no-ex-assign',
+  'no-extra-boolean-cast',
   'no-extra-parens',
+  'no-extra-semi',
+  'no-func-assign',
+  'no-inner-declarations',
+  'no-invalid-regexp',
+  'no-irregular-whitespace',
+  'no-negated-in-lhs',
+  'no-obj-calls',
+  'no-regex-spaces',
+  'no-sparse-arrays',
+  'no-unexpected-multiline',
+  'no-unreachable',
   'no-unsafe-finally',
+  'use-isnan',
   'valid-jsdoc',
+  'valid-typeof',
   // Best Practices
   'accessor-pairs',
   'array-callback-return',
-  'consistent-return',
   'complexity',
+  'consistent-return',
   'curly',
   'dot-location',
   'dot-notation',
   'eqeqeq',
   'guard-for-in',
   'no-alert',
+  'no-case-declarations',
   'no-div-regex',
   'no-else-return',
   'no-empty-function',
+  'no-empty-pattern',
   'no-eval',
   'no-extend-native',
   'no-extra-bind',
@@ -42,8 +66,10 @@ const REQUIRED_RULES = [
   'no-new-wrappers',
   'no-param-reassign',
   'no-proto',
+  'no-redeclare',
   'no-return-assign',
   'no-script-url',
+  'no-self-assign',
   'no-self-compare',
   'no-sequences',
   'no-throw-literal',
@@ -59,7 +85,9 @@ const REQUIRED_RULES = [
   'init-declarations',
   'no-shadow',
   'no-shadow-restricted-names',
+  'no-undef',
   'no-undefined',
+  'no-unused-vars',
   'no-use-before-define',
   // Stylistic Issues
   ['array-bracket-spacing', 2],
@@ -79,8 +107,8 @@ const REQUIRED_RULES = [
   'max-len',
   'max-nested-callbacks',
   'max-params',
-  'max-statements-per-line',
   'max-statements',
+  'max-statements-per-line',
   ['new-cap', 2],
   'new-parens',
   'no-array-constructor',
@@ -118,7 +146,10 @@ const REQUIRED_RULES = [
   ['generator-star-spacing', 2],
   'no-class-assign',
   'no-confusing-arrow',
+  'no-const-assign',
+  'no-dupe-class-members',
   'no-duplicate-imports',
+  'no-new-symbol',
   'no-this-before-super',
   'no-useless-computed-key',
   'no-useless-constructor',
@@ -134,13 +165,6 @@ const REQUIRED_RULES = [
   ['template-curly-spacing', 2],
   ['yield-star-spacing', 2]
 ];
-
 // Not included: jsx-quotes, line-endings, no-mixed-spaces-and-tabs
-test('lints stuff correctly', t => {
-  verifyLintResults({
-    testFile: TEST_FILE,
-    errCount: ERR_COUNT,
-    requiredRules: REQUIRED_RULES,
-    t
-  });
-});
+
+verifyLintResults({testFile: TEST_FILE, requiredRules: REQUIRED_RULES});

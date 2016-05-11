@@ -1,8 +1,6 @@
-import test from 'ava';
 import {verifyLintResults} from './helpers/linting-helpers';
 
-const TEST_FILE = '../../testfiles/js/es5/badfile.js';
-const ERR_COUNT = 7;
+const TEST_FILE = './testfiles/es5/badfile.js';
 const REQUIRED_RULES = [
   // Best Practices
   'no-caller',
@@ -16,11 +14,4 @@ const REQUIRED_RULES = [
   'one-var-declaration-per-line'
 ];
 
-test('lints stuff correctly', t => {
-  verifyLintResults({
-    testFile: TEST_FILE,
-    errCount: ERR_COUNT,
-    requiredRules: REQUIRED_RULES,
-    t
-  });
-});
+verifyLintResults({testFile: TEST_FILE, requiredRules: REQUIRED_RULES});

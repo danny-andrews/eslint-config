@@ -1,7 +1,8 @@
 /* eslint-env node */
 /* eslint-disable no-magic-numbers */
 module.exports = {
-  extends: 'eslint:recommended',
+  root: true,
+  extends: ['eslint:recommended'],
   env: {browser: true},
   rules: {
     // Possible Errors
@@ -12,8 +13,8 @@ module.exports = {
     // Best Practices
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
-    'consistent-return': 'error',
     complexity: ['error', 10],
+    'consistent-return': 'error',
     curly: 'error',
     'dot-location': ['error', 'property'],
     'dot-notation': 'error',
@@ -105,8 +106,8 @@ module.exports = {
     'max-len': ['error', 80],
     'max-nested-callbacks': ['error', 2],
     'max-params': 'error',
-    'max-statements-per-line': 'error',
     'max-statements': 'error',
+    'max-statements-per-line': 'error',
     'new-cap': 'error',
     'new-parens': 'error',
     'no-array-constructor': 'error',
@@ -132,7 +133,7 @@ module.exports = {
     'padded-blocks': ['error', 'never'],
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', {avoidEscape: true}],
-    semi: 'error',
+    semi: ['error', 'always'],
     'semi-spacing': 'error',
     'space-before-blocks': 'error',
     'space-before-function-paren': ['error', 'never'],

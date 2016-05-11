@@ -1,8 +1,6 @@
-import test from 'ava';
 import {verifyLintResults} from './helpers/linting-helpers';
 
-const TEST_FILE = '../../testfiles/js/node/badfile.js';
-const ERR_COUNT = 7;
+const TEST_FILE = './testfiles/node/badfile.js';
 const REQUIRED_RULES = [
   'callback-return',
   'handle-callback-err',
@@ -13,11 +11,4 @@ const REQUIRED_RULES = [
   'no-process-exit'
 ];
 
-test('lints stuff correctly', t => {
-  verifyLintResults({
-    testFile: TEST_FILE,
-    errCount: ERR_COUNT,
-    requiredRules: REQUIRED_RULES,
-    t
-  });
-});
+verifyLintResults({testFile: TEST_FILE, requiredRules: REQUIRED_RULES});

@@ -6,7 +6,7 @@ import {thing} from 'other-thing';
 // sort-imports
 import z from 'z';
 import y from 'y';
-/* eslint-enable no-unused-vars */
+/* eslint-disable no-redeclare */
 
 const number = 7;
 let obj = {};
@@ -15,7 +15,7 @@ let bool = true;
 let string = 'string';
 let regexp = /32/;
 let array = [];
-function func() { // eslint-disable-line no-redeclare
+function func() {
   return 1;
 }
 
@@ -88,12 +88,12 @@ obj = (1 + 0);
 obj = 2; ; // eslint-disable-line max-statements-per-line
 
 // no-func-assign
-func = function() {
+func = function() { // eslint-disable-line no-const-assign
   return 2;
 };
 
 // no-inner-declarations
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   if(bool) {
     function foo2() { // eslint-disable-line no-shadow
       return 1;
@@ -135,7 +135,7 @@ if(bool) {
 }
 
 // no-unsafe-finally
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   try {
     throw Error('bad stuff');
   }
@@ -154,7 +154,7 @@ if(bool === NaN) { // eslint-disable-line no-use-before-define
 * A description
 * @param {int} num1 The first number.
 */
-function foo(num1) { // eslint-disable-line no-redeclare
+function foo(num1) {
   return num1;
 }
 
@@ -180,7 +180,7 @@ obj = {
 
 /* eslint-disable no-magic-numbers */
 // complexity
-function foo() { // eslint-disable-line no-redeclare, max-statements
+function foo() { // eslint-disable-line max-statements
   if(number > 1) {
     if(number === 10) {
       return 32;
@@ -228,7 +228,7 @@ function foo2() {
 }
 
 // curly
-if(bool) number++;
+if(bool) bar++;
 
 // dot-location
 obj = obj.thing.
@@ -259,7 +259,7 @@ case 1:
 regexp = /=foo/;
 
 // no-else-return
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   if(bool) {
     return 1;
   }
@@ -269,7 +269,7 @@ function foo() { // eslint-disable-line no-redeclare
 }
 
 // no-empty-function
-function foo() {} // eslint-disable-line no-redeclare
+function foo() {}
 
 // no-empty-battern
 const {} = obj;
@@ -342,7 +342,7 @@ bar = new Function('a', 'b', 'return a + b;');
 bar = new String('');
 
 // no-param-reassign
-function foo(param1) { // eslint-disable-line no-redeclare
+function foo(param1) {
   param1 = 13;
   return param1;
 }
@@ -351,12 +351,14 @@ function foo(param1) { // eslint-disable-line no-redeclare
 bar = obj.__proto__;
 
 // no-redeclare
+/* eslint-enable no-redeclare */
 function foo() {
   return 1;
 }
+/* eslint-disable no-redeclare */
 
 // no-return-assign
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   return bar = 2;
 }
 
@@ -413,10 +415,10 @@ if('2' === bar) {
 /* Variables */
 
 // init-declarations
-let blah; // eslint-disable-line no-unused-vars
+let blah;
 
 // no-shadow
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   const bar = 2;
   return bar;
 }
@@ -429,17 +431,19 @@ function NaN() {
 // no-undef
 b = 10;
 
+// no-undefined
+let bar = undefined;
+
 // no-unused-vars
+/* eslint-enable no-unused-vars */
 const k = 2;
+/* eslint-disable no-unused-vars */
 
 // no-use-before-define
 if(bool) {
   return l;
 }
 const l = 1;
-
-// no-undefined
-let bar = undefined; // eslint-disable-line no-redeclare
 
 /* Stylistic Issues */
 
@@ -457,7 +461,7 @@ if(bool) {
 }
 
 // camelcase
-const djs_klds = 3; // eslint-disable-line no-unused-vars
+const djs_klds = 3;
 
 // comma-spacing
 array = [1 ,2];
@@ -529,12 +533,12 @@ foo(() => {
 });
 
 // max-params
-function foo(a, b, c, d) { // eslint-disable-line no-redeclare, no-unused-vars
+function foo(a, b, c, d) {
   return 1;
 }
 
 // max-statements
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   bar++;
   bar++;
   bar++;
@@ -549,7 +553,7 @@ function foo() { // eslint-disable-line no-redeclare
 }
 
 // max-statements-per-line
-const thing1 = 2; const thing2 = 1; // eslint-disable-line no-unused-vars
+const thing1 = 2; const thing2 = 1;
 
 // new-cap
 /* eslint-disable no-undef */
@@ -655,7 +659,7 @@ if(bool){
 }
 
 // space-before-function-paren
-function foo () { // eslint-disable-line no-redeclare
+function foo () {
   return 2;
 }
 
@@ -693,7 +697,7 @@ class A { // eslint-disable-line no-unused-vars
 }
 
 // generator-star-spacing
-function*foo() { // eslint-disable-line no-redeclare
+function*foo() {
   yield 2;
 }
 
@@ -719,7 +723,7 @@ class G { // eslint-disable-line no-unused-vars
 // no-new-symbol
 bar = new Symbol('thing');
 
-// this-before-super
+// no-this-before-super
 class K extends G { // eslint-disable-line no-unused-vars
   constructor() {
     this.l = 1;
@@ -755,7 +759,7 @@ foo(function(a) { return a; });
 let neverChanges = 2; // eslint-disable-line no-unused-vars
 
 // prefer-rest-params
-function foo() { // eslint-disable-line no-redeclare
+function foo() {
   return arguments;
 }
 
@@ -768,7 +772,7 @@ bar = 'ok';
 bar = string + 'ok';
 
 // require-yield
-function * foo() { // eslint-disable-line no-redeclare
+function * foo() {
   return 2;
 }
 
@@ -776,7 +780,7 @@ function * foo() { // eslint-disable-line no-redeclare
 bar = `${ bar } hi`;
 
 // yield-star-spacing
-function * foo() {  // eslint-disable-line no-redeclare
+function * foo() {
   yield*bar();
 }
 
