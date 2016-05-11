@@ -95,7 +95,7 @@ func = function() {
 // no-inner-declarations
 function foo() { // eslint-disable-line no-redeclare
   if(bool) {
-    function foo2() { // eslint-disable-line no-redeclare
+    function foo2() { // eslint-disable-line no-shadow
       return 1;
     }
     foo2();
@@ -145,7 +145,7 @@ function foo() { // eslint-disable-line no-redeclare
 }
 
 // use-isnan
-if(bool === NaN) {
+if(bool === NaN) { // eslint-disable-line no-use-before-define
   return 2;
 }
 
@@ -173,13 +173,14 @@ obj = {
 };
 
 // array-callback-return
-[1, 2].map(function(num) {
+[1, 2].map(num => {
+  bar = 2;
   foo(num);
 });
 
 /* eslint-disable no-magic-numbers */
 // complexity
-function foo() { // eslint-disable-line no-redeclare
+function foo() { // eslint-disable-line no-redeclare, max-statements
   if(number > 1) {
     if(number === 10) {
       return 32;
@@ -280,7 +281,7 @@ eval('const a = 2;');
 Object.prototype.extra = 55;
 
 // no-extra-bind
-(function foo() { // eslint-disable-line no-redeclare
+(function foo() { // eslint-disable-line no-shadow
   return 1;
 }).bind(number);
 
@@ -325,13 +326,14 @@ array[23] = 2;
 bar  = 1;
 
 // no-multi-str
-
+bar = 'Line 1 \
+         Line 2';
 
 // no-native-reassign
 String = 'hi';
 
 // no-new
-new Math();
+new Error();
 
 // no-new-func
 bar = new Function('a', 'b', 'return a + b;');
@@ -410,6 +412,9 @@ if('2' === bar) {
 
 /* Variables */
 
+// init-declarations
+let blah; // eslint-disable-line no-unused-vars
+
 // no-shadow
 function foo() { // eslint-disable-line no-redeclare
   const bar = 2;
@@ -433,6 +438,9 @@ if(bool) {
 }
 const l = 1;
 
+// no-undefined
+let bar = undefined; // eslint-disable-line no-redeclare
+
 /* Stylistic Issues */
 
 // array-bracket-spacing
@@ -440,6 +448,13 @@ bar = [ 1 ];
 
 // block-spacing
 if(bool) {return true;}
+
+// brace-style
+if(bool) {
+  bar = 2;
+} else {
+  bar = 1;
+}
 
 // camelcase
 const djs_klds = 3; // eslint-disable-line no-unused-vars
@@ -507,9 +522,9 @@ if(bool) {
 // This comment is way to long, and should be broken over a few different lines to make it readable
 
 // max-nested-callbacks
-foo(function() {
-  bar(function() {
-    return true;
+foo(() => {
+  bar(() => {
+    foo(() => true);
   });
 });
 

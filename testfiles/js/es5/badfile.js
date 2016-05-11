@@ -30,20 +30,6 @@ function foo() {
   return 1;
 }
 
-/* Variables */
-
-// init-declarations
-function foo() {
-  'use strict';
-  var l;
-}
-
-// no-undefined
-function foo() {
-  'use strict';
-  var l = undefined;
-}
-
 /* Stylistic Issues */
 
 // one-var

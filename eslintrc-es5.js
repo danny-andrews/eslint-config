@@ -40,7 +40,7 @@ module.exports = {
       {
         ignoreArrayIndexes: true,
         enforceConst: true,
-        ignore: [-1, 0, 1, 2]
+        ignore: [-1, 0, 1, 2, 3, 4, 5]
       }
     ],
     'no-multi-spaces': 'error',
@@ -103,7 +103,7 @@ module.exports = {
     'linebreak-style': 'error',
     'max-depth': ['error', 3],
     'max-len': ['error', 80],
-    'max-nested-callbacks': ['error', 1],
+    'max-nested-callbacks': ['error', 2],
     'max-params': 'error',
     'max-statements-per-line': 'error',
     'max-statements': 'error',
