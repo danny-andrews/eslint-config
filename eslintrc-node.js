@@ -2,7 +2,6 @@
 module.exports = {
   env: {node: true},
   rules: {
-    // Node
     'callback-return': 'error',
     'handle-callback-err': 'error',
     'no-mixed-requires': ['error', {grouping: true}],

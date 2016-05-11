@@ -1,4 +1,5 @@
 /* eslint-env node */
+/* eslint-disable no-magic-numbers */
 module.exports = {
   extends: 'eslint:recommended',
   env: {browser: true},
@@ -12,7 +13,7 @@ module.exports = {
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
     'consistent-return': 'error',
-    'complexity': ['error', 10],
+    complexity: ['error', 10],
     curly: 'error',
     'dot-location': ['error', 'property'],
     'dot-notation': 'error',

@@ -18,10 +18,18 @@
   "scripts": {
     "lint": "eslint -c eslintrc-es5.js testfiles/js/es5/badfile.js",
     "lint-es6": "eslint -c index.js testfiles/js/es6/badfile.js",
-    "lint-node": "eslint -c eslintrc-node.js testfiles/js/node/badfile.js"
+    "lint-node": "eslint -c eslintrc-node.js testfiles/js/node/badfile.js",
+    "test": "ava"
   },
   "devDependencies": {
+    "ava": "^0.14.0",
     "babel-eslint": "^6.0.4",
     "eslint": "^2.9.0"
+  },
+  "ava": {
+    "files": [
+      "tests/js/**/*-test.js"
+    ],
+    "verbose": true
   }
 }
