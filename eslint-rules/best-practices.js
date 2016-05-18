@@ -7,7 +7,7 @@ module.exports = {
     curly: ['error', 'all'],
     'default-case': 'off',
     'dot-location': ['error', 'property'],
-    'dot-notation': ['error', {allowKeywords: false}],
+    'dot-notation': ['error'],
     eqeqeq: 'error',
     'no-alert': 'error',
     'no-div-regex': 'error',

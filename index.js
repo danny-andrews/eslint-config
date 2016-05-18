@@ -4,5 +4,8 @@ module.exports = {
     './eslintrc-es5.js',
     './eslint-rules/es6.js',
     './eslint-rules/node.js'
-  ]
+  ],
+  rules: {
+    'dot-notation': ['error', {allowKeywords: true}]
+  }
 };
