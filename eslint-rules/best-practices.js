@@ -12,7 +12,10 @@ module.exports = {
     'no-alert': 'error',
     'no-div-regex': 'error',
     'no-else-return': 'error',
-    'no-empty-function': ['error', {}],
+    'no-empty-function': [
+      'error',
+      {allow: ['methods', 'arrowFunctions']}
+    ],
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
