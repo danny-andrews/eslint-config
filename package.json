@@ -30,6 +30,7 @@
     "sort-package-json": "^1.4.0"
   },
   "peerDependencies": {
+    "babel-eslint": "^6.0.4",
     "eslint": "^2.9.0"
   },
   "ava": {
