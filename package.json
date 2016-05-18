@@ -29,6 +29,9 @@
     "eslint": "^2.9.0",
     "sort-package-json": "^1.4.0"
   },
+  "peerDependencies": {
+    "eslint": "^2.9.0"
+  },
   "ava": {
     "files": [
       "tests/js/**/*-test.js"
