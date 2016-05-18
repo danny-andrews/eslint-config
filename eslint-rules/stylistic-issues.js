@@ -32,7 +32,7 @@ module.exports = {
     'max-params': 'error',
     'max-statements': 'error',
     'max-statements-per-line': 'error',
-    'new-cap': 'error',
+    'new-cap': ['error', {capIsNew: false}],
     'new-parens': 'error',
     'no-array-constructor': 'error',
     'no-bitwise': 'error',
