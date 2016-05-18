@@ -130,6 +130,7 @@ string = 'world'
 // no-unreachable
 if(bool) {
   return 1;
+
   return 2;
 }
 
@@ -246,6 +247,7 @@ alert('hi');
 switch(foo) {
 case 1:
   const x = 1;
+
   return x;
 }
 
@@ -338,6 +340,7 @@ bar = new String('');
 // no-param-reassign
 function foo(param1) {
   param1 = 13;
+
   return param1;
 }
 
@@ -414,6 +417,7 @@ let blah;
 // no-shadow
 function foo() {
   const bar = 2;
+
   return bar;
 }
 
@@ -586,6 +590,12 @@ function foo() {
 // max-statements-per-line
 const thing1 = 2; const thing2 = 1;
 
+// newline-before-return
+function foo() {
+  bar = 0;
+  return 3;
+}
+
 // new-cap
 /* eslint-disable no-undef */
 bar = Blah();
@@ -667,7 +677,7 @@ bar = 1 +
 // padded-blocks
 if(bool) {
 
-  return 2;
+  return 2; // eslint-disable-line newline-before-return
 
 }
 
@@ -717,6 +727,7 @@ bar = (a) => 2;
 // arrow-spacing
 bar = ()=>{
   bar = 2;
+
   return bar;
 };
 
@@ -818,6 +829,7 @@ function * foo() {
 return (function() {
   foo();
   foo2();
+
   return {obj, regexp, array};
 })();
 
