@@ -439,6 +439,43 @@ if(bool) {
 }
 const l = 1;
 
+/* Node */
+
+// callback-return
+function doSomething(err, callback) {
+  if(err) {
+    callback(err);
+  }
+  callback();
+}
+
+// handle-callback-err
+function loadData(err, data) {
+  doSomething();
+}
+
+// no-mixed-requires
+/* eslint-disable no-var, one-var, vars-on-top */
+const fs = require('fs'),
+  async = require('async');
+/* eslint-enable no-var, one-var, vars-on-top */
+
+// no-new-require
+const appHeader = new require('app-header'); // eslint-disable-line new-cap
+
+// no-path-concat
+const fullPath = __dirname + '/foo.js'; // eslint-disable-line prefer-template
+
+// no-process-env
+if(process.env.NODE_ENV === 'dev') {
+  return 1;
+}
+
+// no-process-exit
+if(bool) {
+  process.exit(1);
+}
+
 /* Stylistic Issues */
 
 // array-bracket-spacing

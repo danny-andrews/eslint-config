@@ -1,5 +1,3 @@
-/* eslint-env node */
-/* eslint-disable no-magic-numbers */
 module.exports = {
   root: true,
   extends: [

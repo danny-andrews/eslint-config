@@ -162,7 +162,15 @@ const REQUIRED_RULES = [
   'require-yield',
   'sort-imports',
   ['template-curly-spacing', 2],
-  ['yield-star-spacing', 2]
+  ['yield-star-spacing', 2],
+  // Node
+  'callback-return',
+  'handle-callback-err',
+  'no-mixed-requires',
+  'no-new-require',
+  'no-path-concat',
+  'no-process-env',
+  'no-process-exit'
 ];
 // Not included: jsx-quotes, line-endings, no-mixed-spaces-and-tabs
 
