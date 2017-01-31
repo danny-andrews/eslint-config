@@ -486,7 +486,7 @@ if(bool) {
 bar = [ 1 ];
 
 // block-spacing
-if(bool) {return true;}
+if(bool) {return true;} // eslint-disable-line max-statements-per-line
 
 // brace-style
 if(bool) {
@@ -653,7 +653,7 @@ bar = new Object();
 foo ();
 
 // no-trailing-spaces
-bar = 2; 
+bar = 2;  
 
 // no-underscore-dangle
 const _lk = 2; // eslint-disable-line no-unused-vars
@@ -719,7 +719,7 @@ bar = bar ++;
 /* ES6 */
 
 // arrow-body-style
-bar = () => { return 2; };
+bar = () => { return 2; }; // eslint-disable-line max-statements-per-line
 
 // arrow-parens
 bar = (a) => 2;
@@ -795,7 +795,7 @@ obj = {
 };
 
 // prefer-arrow-callback
-foo(function(a) { return a; });
+foo(function(a) { return a; });  // eslint-disable-line max-statements-per-line
 
 // prefer-const
 let neverChanges = 2; // eslint-disable-line no-unused-vars

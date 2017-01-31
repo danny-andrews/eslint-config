@@ -1,6 +1,6 @@
-import {verifyLintResults} from './helpers/linting-helpers';
+import {verifyLintResults} from '../helpers/linting-helpers';
 
-const TEST_FILE = './testfiles/es6/badfile.js';
+const TEST_FILE = './badfile.js';
 const REQUIRED_RULES = [
   // Possible Errors
   'comma-dangle',
