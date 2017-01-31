@@ -1,5 +1,5 @@
 {
-  "name": "lint-configs",
+  "name": "@danny.andrews/eslint-config",
   "version": "1.0.0",
   "description": "A collection of lint config files",
   "keywords": [
@@ -17,7 +17,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danny-andrews/lint-configs.git"
+    "url": "git+https://github.com/danny-andrews/eslint-config.git"
   },
   "scripts": {
     "lint": "eslint -c index.js ./*.js && node_modules/.bin/sort-package-json",
