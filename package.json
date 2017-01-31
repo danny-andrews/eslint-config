@@ -1,7 +1,7 @@
 {
   "name": "@danny.andrews/eslint-config",
   "version": "1.0.0",
-  "description": "A collection of lint config files",
+  "description": "The eslint config I use for personal projects",
   "keywords": [
     "eslint",
     "eslintconfig",
