@@ -12,7 +12,7 @@ module.exports = {
     'consistent-this': 'error',
     'eol-last': 'error',
     'func-call-spacing': 'error',
-    'func-names': 'never',
+    'func-names': ['error', 'never'],
     'func-style': ['error', 'declaration', {allowArrowFunctions: true}],
     indent: ['error', 2],
     'jsx-quotes': 'error',

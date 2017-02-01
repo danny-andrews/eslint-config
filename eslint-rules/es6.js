@@ -19,7 +19,7 @@ module.exports = {
     'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
-    'prefer-desctructuring': 'error',
+    'prefer-destructuring': 'error',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
