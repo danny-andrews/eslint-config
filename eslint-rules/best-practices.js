@@ -2,7 +2,6 @@ module.exports = {
   rules: {
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
-    complexity: ['error', 10],
     'consistent-return': 'error',
     curly: ['error', 'all'],
     'default-case': 'off',

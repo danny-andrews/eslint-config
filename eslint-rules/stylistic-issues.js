@@ -26,10 +26,7 @@ module.exports = {
       }
     ],
     'linebreak-style': 'error',
-    'max-depth': ['error', 3],
     'max-len': ['error', 80], // eslint-disable-line no-magic-numbers
-    'max-nested-callbacks': ['error', 2],
-    'max-params': 'error',
     'max-statements': 'error',
     'max-statements-per-line': 'error',
     'new-cap': ['error', {capIsNew: false}],
