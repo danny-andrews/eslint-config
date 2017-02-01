@@ -4,7 +4,6 @@ module.exports = {
     'array-callback-return': 'error',
     'consistent-return': 'error',
     curly: ['error', 'all'],
-    'default-case': 'off',
     'dot-location': ['error', 'property'],
     'dot-notation': 'error',
     eqeqeq: 'error',
