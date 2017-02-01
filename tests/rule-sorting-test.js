@@ -1,5 +1,5 @@
 import test from 'ava';
-import rulesets from '../eslint-rules';
+import rulesets from '../rulesets';
 
 const getUnsortedRulePairs = rules => {
   const ruleNames = Object.keys(rules).map(rule => `${rule}.`);

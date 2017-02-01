@@ -2,11 +2,11 @@ module.exports = {
   root: true,
   extends: [
     'eslint:recommended',
-    './eslint-rules/best-practices.js',
-    './eslint-rules/legacy.js',
-    './eslint-rules/possible-errors.js',
-    './eslint-rules/stylistic-issues.js',
-    './eslint-rules/variables.js'
+    './rulesets/best-practices.js',
+    './rulesets/legacy.js',
+    './rulesets/possible-errors.js',
+    './rulesets/stylistic-issues.js',
+    './rulesets/variables.js'
   ],
   env: {node: false, browser: true}
 };
