@@ -30,7 +30,7 @@ module.exports = {
       }
     ],
     'linebreak-style': 'error',
-    'max-len': ['error', 80], // eslint-disable-line no-magic-numbers
+    'max-len': ['error', 80],
     'max-statements': 'error',
     'max-statements-per-line': 'error',
     'new-cap': ['error', {capIsNew: false}],
