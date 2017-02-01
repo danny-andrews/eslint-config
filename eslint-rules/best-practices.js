@@ -41,7 +41,6 @@ module.exports = {
     'no-new-wrappers': 'error',
     'no-param-reassign': 'error',
     'no-proto': 'error',
-    'no-restricted-syntax': ['error', 'ForInStatement'],
     'no-return-assign': 'error',
     'no-script-url': 'error',
     'no-self-compare': 'error',

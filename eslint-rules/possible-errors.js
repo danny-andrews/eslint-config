@@ -1,6 +1,5 @@
 module.exports = {
   rules: {
-    'comma-dangle': 'error',
     'no-cond-assign': ['error', 'always'],
     'no-extra-parens': 'error',
     'no-inner-declarations': ['error', 'both'],
