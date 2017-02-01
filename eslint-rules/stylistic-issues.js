@@ -4,12 +4,15 @@ module.exports = {
     'block-spacing': 'error',
     'brace-style': ['error', 'stroustrup', {allowSingleLine: true}],
     camelcase: 'error',
+    'capitalized-comments': 'error',
     'comma-dangle': 'error',
     'comma-spacing': 'error',
     'comma-style': 'error',
     'computed-property-spacing': 'error',
     'consistent-this': 'error',
     'eol-last': 'error',
+    'func-call-spacing': 'error',
+    'func-names': 'never',
     'func-style': ['error', 'declaration', {allowArrowFunctions: true}],
     'jsx-quotes': 'error',
     indent: ['error', 2],
@@ -39,6 +42,7 @@ module.exports = {
     'no-inline-comments': 'error',
     'no-lonely-if': 'error',
     'no-mixed-spaces-and-tabs': 'error',
+    'no-multi-assign': 'error',
     'no-multiple-empty-lines': ['error', {max: 1}],
     'no-negated-condition': 'error',
     'no-nested-ternary': 'error',
@@ -49,6 +53,7 @@ module.exports = {
     'no-underscore-dangle': ['error', {allowAfterThis: true}],
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
+    'object-curly-newline': ['error', {multiline: true}],
     'object-curly-spacing': ['error', 'never'],
     'operator-assignment': 'error',
     'operator-linebreak': ['error', 'before'],
@@ -62,6 +67,7 @@ module.exports = {
     'space-in-parens': 'error',
     'space-infix-ops': 'error',
     'space-unary-ops': 'error',
-    'spaced-comment': 'error'
+    'spaced-comment': 'error',
+    'unicode-bom': 'error'
   }
 };
