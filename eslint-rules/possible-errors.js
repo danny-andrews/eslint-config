@@ -6,7 +6,6 @@ module.exports = {
     'no-template-curly-in-string': 'error',
     'no-unsafe-negation': 'error',
     'no-inner-declarations': ['error', 'both'],
-    'no-unsafe-finally': 'error',
     'valid-jsdoc': 'error'
   }
 };
