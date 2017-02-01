@@ -4,9 +4,7 @@
   "description": "The eslint config I use for personal projects",
   "keywords": [
     "eslint",
-    "eslintconfig",
-    "lint",
-    "lintconfigs"
+    "eslintconfig"
   ],
   "license": "MIT",
   "author": "Danny Andrews",
