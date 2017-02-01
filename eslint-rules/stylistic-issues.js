@@ -52,7 +52,6 @@ module.exports = {
     'no-underscore-dangle': ['error', {allowAfterThis: true}],
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
-    'object-curly-newline': ['error', {multiline: true}],
     'object-curly-spacing': ['error', 'never'],
     'operator-assignment': 'error',
     'operator-linebreak': ['error', 'before'],
