@@ -37,9 +37,9 @@ module.exports = {
     ],
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
-    'no-new': 'error',
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
+    'no-new': 'error',
     'no-octal-escape': 'error',
     'no-param-reassign': 'error',
     'no-proto': 'error',
@@ -57,8 +57,8 @@ module.exports = {
     'no-void': 'error',
     'no-with': 'error',
     'prefer-promise-reject-errors': 'error',
-    'require-await': 'error',
     radix: 'error',
+    'require-await': 'error',
     'wrap-iife': ['error', 'inside'],
     yoda: 'error'
   }
