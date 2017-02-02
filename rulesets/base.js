@@ -1,4 +1,5 @@
 module.exports = {
+  extends: ['eslint:recommended'],
   rules: {
     'accessor-pairs': 'error',
     'array-bracket-spacing': 'error',

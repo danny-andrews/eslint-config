@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['eslint:recommended', './rulesets/base'],
+  extends: './rulesets/base',
   env: {browser: true}
 };
