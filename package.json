@@ -21,6 +21,9 @@
     "lint": "eslint -c index.js ./*.js && node_modules/.bin/sort-package-json",
     "test": "ava"
   },
+  "dependencies": {
+    "eslint-config-eslint": "^3.0.0"
+  },
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-eslint": "^7.1.1",

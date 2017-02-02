@@ -1321,6 +1321,12 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint-config-eslint@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-eslint/-/eslint-config-eslint-3.0.0.tgz#58afbcaf3495f5301aa4dea20206ca1125528716"
+  dependencies:
+    js-yaml "^3.5.1"
+
 eslint@^3.14.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.14.1.tgz#8a62175f2255109494747a1b25128d97b8eb3d97"
