@@ -9,6 +9,7 @@ module.exports = {
     'dot-location': ['error', 'property'],
     'func-names': ['error', 'never'],
     'func-style': ['error', 'declaration', {allowArrowFunctions: true}],
+    'global-require': 'error',
     indent: ['error', 2, {SwitchCase: 0}],
     'init-declarations': 'error',
     'jsx-quotes': 'error',
