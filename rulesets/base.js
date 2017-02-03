@@ -35,7 +35,6 @@ module.exports = {
       'error',
       {allow: ['methods', 'arrowFunctions']}
     ],
-    'no-extra-parens': 'error',
     'no-implicit-coercion': 'error',
     'no-implicit-globals': 'error',
     'no-inline-comments': 'error',
