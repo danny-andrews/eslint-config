@@ -9,7 +9,7 @@
   "license": "MIT",
   "author": "Danny Andrews",
   "files": [
-    "eslint-rules",
+    "rulesets",
     "*.js"
   ],
   "main": "index.js",
