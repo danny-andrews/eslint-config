@@ -8,8 +8,8 @@ module.exports = {
   env: {es6: true},
   rules: {
     'generator-star-spacing': ['error', 'both'],
-    'no-duplicate-imports': 'error',
     'no-confusing-arrow': ['error', {allowParens: true}],
+    'no-duplicate-imports': 'error',
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     'prefer-destructuring': 'error',
