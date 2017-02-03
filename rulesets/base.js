@@ -25,7 +25,6 @@ module.exports = {
     'linebreak-style': 'error',
     'max-len': ['error', 80], // eslint-disable-line no-magic-numbers
     'max-statements-per-line': 'error',
-    'max-statements': 'error',
     'new-cap': ['error', {capIsNew: false}],
     'newline-after-var': 'off',
     'newline-before-return': 'error',
