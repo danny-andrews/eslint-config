@@ -43,6 +43,7 @@ module.exports = {
     'no-implicit-globals': 'error',
     'no-inline-comments': 'error',
     'no-inner-declarations': ['error', 'both'],
+    'no-invalid-this': 'off',
     'no-lonely-if': 'error',
     'no-magic-numbers': [
       'error',
