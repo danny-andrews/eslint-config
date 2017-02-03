@@ -3,7 +3,11 @@ module.exports = {
     'accessor-pairs': 'error',
     'brace-style': ['error', 'stroustrup', {allowSingleLine: true}],
     camelcase: ['error', {properties: 'never'}],
-    'capitalized-comments': 'error',
+    'capitalized-comments': [
+      'error',
+      'always',
+      {ignoreConsecutiveComments: true}
+    ],
     'computed-property-spacing': 'error',
     'consistent-this': 'error',
     'dot-location': ['error', 'property'],
