@@ -18,7 +18,7 @@
     "url": "git+https://github.com/danny-andrews/eslint-config.git"
   },
   "scripts": {
-    "lint": "eslint -c index.js ./*.js && node_modules/.bin/sort-package-json",
+    "lint": "eslint . && node_modules/.bin/sort-package-json",
     "test": "ava"
   },
   "dependencies": {

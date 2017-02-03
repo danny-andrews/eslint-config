@@ -1,5 +1,5 @@
-import test from 'ava';
 import rulesets from '../rulesets';
+import test from 'ava';
 
 const getUnsortedRulePairs = rules => {
   const ruleNames = Object.keys(rules).map(rule => `${rule}.`);
@@ -12,7 +12,7 @@ const getUnsortedRulePairs = rules => {
   ]).filter(pair => pair[0] !== pair[1]);
 
   return unsortedPairs;
-}
+};
 
 const errorMsg = unsortedPairs =>
   `Rules not sorted. Given vs expected:\n[${unsortedPairs.join(']\n[')}]`;
@@ -26,6 +26,6 @@ const testSet = (name, set) => {
       errorMsg(unsortedPairs)
     );
   });
-}
+};
 
-Object.keys(rulesets).forEach(key => testSet(key, rulesets[key]))
+Object.keys(rulesets).forEach(key => testSet(key, rulesets[key]));
