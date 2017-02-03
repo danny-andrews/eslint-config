@@ -72,7 +72,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'never'],
     'one-var': ['error', {var: 'always', let: 'never', const: 'never'}],
     'operator-assignment': 'error',
-    'operator-linebreak': ['error', 'before'],
+    'operator-linebreak': ['error', 'before', {overrides: {'=': 'after'}}],
     'padded-blocks': ['error', 'never'],
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', {avoidEscape: true}],
