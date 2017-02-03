@@ -56,7 +56,6 @@ module.exports = {
     'no-multiple-empty-lines': ['error', {max: 1}],
     'no-negated-condition': 'error',
     'no-param-reassign': 'error',
-    'no-prototype-builtins': 'error',
     'no-restricted-syntax': ['error', 'ForInStatement'],
     'no-return-await': 'error',
     'no-script-url': 'error',
