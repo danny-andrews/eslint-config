@@ -1,4 +1,3 @@
 module.exports = {
-  extends: ['./rulesets/base.js', './rulesets/es6.js'],
-  env: {browser: true}
+  extends: ['./eslintrc-es5.js', './rulesets/es6.js']
 };

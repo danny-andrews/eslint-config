@@ -22,7 +22,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "eslint-config-eslint": "^3.0.0"
+    "eslint-config-eslint": "eslint/eslint#3.14.1"
   },
   "devDependencies": {
     "ava": "^0.17.0",
@@ -32,7 +32,7 @@
   },
   "peerDependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.14.1"
+    "eslint": "^3.0.0"
   },
   "ava": {
     "files": [
