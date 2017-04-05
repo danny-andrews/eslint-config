@@ -22,12 +22,12 @@
     "test": "ava"
   },
   "dependencies": {
-    "eslint-config-eslint": "eslint/eslint#3.14.1"
+    "eslint-config-eslint": "^4.0.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.14.1",
+    "eslint": "^3.19.0",
     "sort-package-json": "^1.4.0"
   },
   "peerDependencies": {
