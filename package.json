@@ -18,6 +18,7 @@
     "url": "git+https://github.com/danny-andrews/eslint-config.git"
   },
   "scripts": {
+    "ci": "yarn lint && yarn test",
     "lint": "eslint . && node_modules/.bin/sort-package-json",
     "test": "ava"
   },
