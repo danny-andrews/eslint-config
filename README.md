@@ -1,6 +1,6 @@
 ## Usage
 
-.eslintrc.yaml
+.eslintrc.yaml:
 ```yaml
 extends: '@danny.andrews/eslint-config'
 ```
