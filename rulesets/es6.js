@@ -7,10 +7,10 @@ module.exports = {
   },
   env: {es6: true},
   rules: {
+    'computed-property-spacing': 'error',
     'generator-star-spacing': ['error', 'both'],
     'no-confusing-arrow': ['error', {allowParens: true}],
     'no-duplicate-imports': 'error',
-    'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     'prefer-destructuring': 'error',
     'prefer-numeric-literals': 'error',

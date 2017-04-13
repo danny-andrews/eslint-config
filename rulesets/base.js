@@ -1,14 +1,13 @@
 module.exports = {
   rules: {
     'accessor-pairs': 'error',
-    'brace-style': ['error', 'stroustrup', {allowSingleLine: true}],
-    camelcase: ['error', {properties: 'never'}],
+    'brace-style': ['error', '1tbs', {allowSingleLine: true}],
+    camelcase: ['error', {properties: 'always'}],
     'capitalized-comments': [
       'error',
       'always',
       {ignoreConsecutiveComments: true}
     ],
-    'computed-property-spacing': 'error',
     'consistent-this': 'error',
     'dot-location': ['error', 'property'],
     'func-names': ['error', 'never'],
@@ -27,8 +26,16 @@ module.exports = {
       }
     }],
     'linebreak-style': 'error',
-    'max-len': ['error', 80], // eslint-disable-line no-magic-numbers
-    'max-statements-per-line': 'error',
+    'lines-around-comment': ['error', {
+      beforeBlockComment: true,
+      afterBlockComment: false,
+      beforeLineComment: true,
+      afterLineComment: false,
+      allowBlockStart: true,
+      allowObjectStart: true,
+      allowArrayStart: true
+    }],
+    'max-len': ['error', 80],
     'new-cap': ['error', {capIsNew: false}],
     'newline-after-var': 'off',
     'newline-before-return': 'error',
@@ -43,7 +50,6 @@ module.exports = {
     'no-implicit-globals': 'error',
     'no-inline-comments': 'error',
     'no-inner-declarations': ['error', 'both'],
-    'no-invalid-this': 'off',
     'no-lonely-if': 'error',
     'no-magic-numbers': [
       'error',
@@ -59,13 +65,11 @@ module.exports = {
     'no-param-reassign': 'error',
     'no-restricted-syntax': ['error', 'ForInStatement'],
     'no-return-await': 'error',
-    'no-script-url': 'error',
     'no-self-compare': 'error',
     'no-spaced-func': 'error',
     'no-template-curly-in-string': 'error',
     'no-throw-literal': 'error',
     'no-undef': ['error', {typeof: false}],
-    'no-unsafe-negation': 'error',
     'no-unused-expressions': ['error', {allowShortCircuit: true}],
     'no-useless-call': 'error',
     'no-void': 'error',
@@ -75,7 +79,6 @@ module.exports = {
     'operator-assignment': 'error',
     'operator-linebreak': ['error', 'before', {overrides: {'=': 'after'}}],
     'padded-blocks': ['error', 'never'],
-    'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', {avoidEscape: true}],
     'require-await': 'error',
     'require-jsdoc': 'off',
