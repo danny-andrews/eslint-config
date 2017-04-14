@@ -26,6 +26,15 @@ module.exports = {
       }
     }],
     'linebreak-style': 'error',
+    'lines-around-comment': ['error', {
+      beforeBlockComment: true,
+      afterBlockComment: false,
+      beforeLineComment: true,
+      afterLineComment: false,
+      allowBlockStart: true,
+      allowObjectStart: true,
+      allowArrayStart: true
+    }],
     'max-len': ['error', 80],
     'new-cap': ['error', {capIsNew: false}],
     'newline-after-var': 'off',
