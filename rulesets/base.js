@@ -8,7 +8,6 @@ module.exports = {
       'always',
       {ignoreConsecutiveComments: true}
     ],
-    'computed-property-spacing': 'error',
     'consistent-this': 'error',
     'dot-location': ['error', 'property'],
     'func-names': ['error', 'never'],
