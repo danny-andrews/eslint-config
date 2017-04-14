@@ -1,8 +1,8 @@
 module.exports = {
   rules: {
     'accessor-pairs': 'error',
-    camelcase: ['error', {properties: 'never'}],
     'brace-style': ['error', '1tbs', {allowSingleLine: true}],
+    camelcase: ['error', {properties: 'always'}],
     'capitalized-comments': [
       'error',
       'always',
