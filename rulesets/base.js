@@ -67,7 +67,6 @@ module.exports = {
     'no-restricted-syntax': ['error', 'ForInStatement'],
     'no-return-await': 'error',
     'no-self-compare': 'error',
-    'no-spaced-func': 'error',
     'no-template-curly-in-string': 'error',
     'no-throw-literal': 'error',
     'no-undef': ['error', {typeof: false}],
