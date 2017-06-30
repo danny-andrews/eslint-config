@@ -57,7 +57,7 @@ module.exports = {
         ignoreArrayIndexes: true,
         enforceConst: true,
         detectObjects: true,
-        ignore: [-1, 0, 1]
+        ignore: [-1, 0, 1, 100]
       }
     ],
     'no-multi-assign': 'error',
