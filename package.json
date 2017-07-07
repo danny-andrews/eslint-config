@@ -19,7 +19,7 @@
   },
   "scripts": {
     "ci": "yarn lint && yarn test",
-    "lint": "eslint . && node_modules/.bin/sort-package-json",
+    "lint": "eslint . && sort-package-json",
     "test": "ava"
   },
   "dependencies": {
