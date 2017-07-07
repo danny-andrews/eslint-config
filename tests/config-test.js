@@ -1,11 +1,12 @@
 import {allCoreRules, allMyRules, rulePairs, rulesForConfig} from './utils';
 import {difference, forEachObjIndexed, intersection, toPairs} from 'ramda';
-import rules from 'eslint/lib/rules';
+import Rules from 'eslint/lib/rules';
 import rulesets from '../rulesets';
 import test from 'ava';
 
 test('config has no deprecated rules', t => {
   const allRuleNames = Object.keys(allMyRules);
+  const rules = new Rules();
   const actual = allRuleNames.filter(
     ruleName => rules.get(ruleName).meta.deprecated
   );
