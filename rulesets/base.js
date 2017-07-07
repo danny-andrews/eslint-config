@@ -37,8 +37,6 @@ module.exports = {
     }],
     'max-len': ['error', 80],
     'new-cap': ['error', {capIsNew: false}],
-    'newline-after-var': 'off',
-    'newline-before-return': 'error',
     'no-cond-assign': ['error', 'always'],
     'no-continue': 'error',
     'no-div-regex': 'error',
@@ -79,6 +77,14 @@ module.exports = {
     'operator-assignment': 'error',
     'operator-linebreak': ['error', 'before', {overrides: {'=': 'after'}}],
     'padded-blocks': ['error', 'never'],
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return'
+      }
+    ],
     quotes: ['error', 'single', {avoidEscape: true}],
     'require-await': 'error',
     'require-jsdoc': 'off',
