@@ -11,8 +11,8 @@ const inheritedDisabledRules = inheritedRules
 
 test('config has no deprecated rules', t => {
   const rules = new Rules();
-  const actual = myRules.map(R.prop('name')).filter(
-    ruleName => rules.get(ruleName).meta.deprecated
+  const actual = myRules.filter(
+    ({name, rule}) => rules.get(name).meta.deprecated && rule !== 'off'
   );
 
   t.deepEqual(actual, []);

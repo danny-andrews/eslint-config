@@ -9,7 +9,7 @@ module.exports = {
   rules: {
     'computed-property-spacing': 'error',
     'generator-star-spacing': ['error', 'both'],
-    'no-confusing-arrow': ['error', {allowParens: true}],
+    'no-confusing-arrow': 'off',
     'no-duplicate-imports': 'error',
     'no-useless-rename': 'error',
     'prefer-destructuring': 'error',

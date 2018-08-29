@@ -48,13 +48,12 @@ module.exports = {
     'multiline-comment-style': ['error', 'separate-lines'],
     'multiline-ternary': ['error', 'always-multiline'],
     'new-cap': ['error', {capIsNew: false}],
-    'newline-per-chained-call': 'error',
+    'newline-after-var': 'off',
     'no-async-promise-executor': 'error',
     'no-await-in-loop': 'error',
     'no-bitwise': 'error',
     'no-buffer-constructor': 'error',
     'no-cond-assign': ['error', 'always'],
-    'no-confusing-arrow': 'off',
     'no-continue': 'error',
     'no-div-regex': 'error',
     'no-empty-function': [
@@ -119,7 +118,6 @@ module.exports = {
     quotes: ['error', 'single', {avoidEscape: true}],
     'require-await': 'error',
     'require-jsdoc': 'off',
-    'require-unicode-regexp': 'error',
     'semi-spacing': 'error',
     'space-before-function-paren': [
       'error',
