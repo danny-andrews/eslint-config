@@ -1,6 +1,6 @@
 {
   "name": "@danny.andrews/eslint-config",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "The eslint config I use for personal projects",
   "keywords": [
     "eslint",
