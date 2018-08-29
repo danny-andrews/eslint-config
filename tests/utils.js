@@ -1,18 +1,14 @@
-import {map, merge, pipe, reduce, values} from 'ramda';
 import allEslintRules from 'eslint/conf/eslint-all';
 import {CLIEngine} from 'eslint';
+import R from 'ramda';
 import rulesets from '../rulesets';
 
-export const allCoreRules = allEslintRules.rules;
+export const coreRuleNames = Object.keys(allEslintRules.rules);
 
-export const rulePairs = rules => {
-  const ruleNames = Object.keys(rules);
-  const sortedRuleNames = ruleNames.concat().sort();
-
-  return ruleNames
-    .map((name, i) => [name, sortedRuleNames[i]])
-    .filter(pair => pair[0] !== pair[1]);
-};
+const ruleMapToList = R.pipe(
+  R.toPairs,
+  R.map(([name, rule]) => ({name, rule}))
+);
 
 export const rulesForConfig = config => {
   const cli = new CLIEngine({
@@ -20,11 +16,39 @@ export const rulesForConfig = config => {
     baseConfig: config
   });
 
-  return cli.getConfigForFile('.').rules;
+  return ruleMapToList(cli.getConfigForFile('.').rules);
 };
 
-export const allMyRules = pipe(
-  map(({rules}) => rules),
-  values,
-  reduce((acc, rules) => merge(acc, rules), {}),
+export const myRules = R.pipe(
+  R.map(({rules}) => rules),
+  R.values,
+  R.reduce((acc, rules) => R.merge(acc, rules), {}),
+  ruleMapToList
 )(rulesets);
+
+export const IGNORED_RULES = [
+  'block-scoped-var',
+  'func-name-matching',
+  'id-blacklist',
+  'id-match',
+  'id-length',
+  'implicit-arrow-linebreak',
+  'line-comment-position',
+  'max-classes-per-file',
+  'no-eq-null',
+  'no-extra-label',
+  'no-extra-parens',
+  'no-mixed-operators',
+  'no-restricted-globals',
+  'no-restricted-imports',
+  'no-restricted-modules',
+  'no-restricted-properties',
+  'no-ternary',
+  'no-warning-comments',
+  'nonblock-statement-body-position',
+  'semi-style',
+  'sort-imports',
+  'sort-keys',
+  'sort-vars',
+  'wrap-regex'
+];

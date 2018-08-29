@@ -1,2 +1,3 @@
 rules:
   no-magic-numbers: off
+  sort-keys: error
