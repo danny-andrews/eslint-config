@@ -1,6 +1,7 @@
 import allEslintRules from 'eslint/conf/eslint-all';
 import {CLIEngine} from 'eslint';
 import R from 'ramda';
+
 import rulesets from '../rulesets';
 
 export const coreRuleNames = Object.keys(allEslintRules.rules);

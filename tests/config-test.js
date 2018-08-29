@@ -1,7 +1,8 @@
-import {coreRuleNames, myRules, rulesForConfig, IGNORED_RULES} from './utils';
 import R from 'ramda';
 import Rules from 'eslint/lib/rules';
 import test from 'ava';
+
+import {coreRuleNames, myRules, rulesForConfig, IGNORED_RULES} from './utils';
 
 const inheritedRules = rulesForConfig({extends: 'eslint'});
 const finalRules = rulesForConfig({extends: '.eslintrc.yaml'});

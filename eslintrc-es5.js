@@ -1,4 +1,8 @@
 module.exports = {
-  extends: ['eslint', './rulesets/base.js'],
+  extends: [
+    'eslint',
+    './rulesets/imports.js',
+    './rulesets/base.js'
+  ],
   env: {browser: true}
 };

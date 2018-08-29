@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint-config-eslint": "^4.0.0"
+    "eslint-config-eslint": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
