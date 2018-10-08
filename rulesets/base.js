@@ -82,7 +82,7 @@ module.exports = {
     'no-plusplus': 'error',
     'no-process-env': 'error',
     'no-prototype-builtins': 'error',
-    'no-restricted-syntax': ['error', 'ForInStatement'],
+    'no-restricted-syntax': ['error', 'ForInStatement', 'AwaitExpression'],
     'no-return-await': 'error',
     'no-self-compare': 'error',
     'no-sync': 'error',
