@@ -1,11 +1,6 @@
 export default {
-  babel: {
-    testOptions: {
-      babelrc: false
-    }
-  },
+  failFast: false,
   files: ['tests/**/*-test.js'],
-  verbose: true,
   require: ['@babel/register'],
-  failFast: false
+  verbose: true
 };

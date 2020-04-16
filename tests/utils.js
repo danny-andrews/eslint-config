@@ -7,7 +7,7 @@ import rulesets from '../rulesets';
 export const coreRuleNames = Object.keys(allEslintRules.rules);
 
 const ruleMapToList = R.pipe(
-  R.toPairs,
+  Array.from,
   R.map(([name, rule]) => ({name, rule}))
 );
 
@@ -17,8 +17,10 @@ export const rulesForConfig = config => {
     baseConfig: config
   });
 
-  return ruleMapToList(cli.getConfigForFile('.').rules);
+  return ruleMapToList(cli.getRules());
 };
+
+export const getAllRules = () => new CLIEngine().getRules();
 
 export const myRules = R.pipe(
   R.map(({rules}) => rules),

@@ -1,8 +1,13 @@
 import R from 'ramda';
-import Rules from 'eslint/lib/rules';
 import test from 'ava';
 
-import {coreRuleNames, myRules, rulesForConfig, IGNORED_RULES} from './utils';
+import {
+  coreRuleNames,
+  getAllRules,
+  myRules,
+  rulesForConfig,
+  IGNORED_RULES
+} from './utils';
 
 const inheritedRules = rulesForConfig({extends: 'eslint'});
 const finalRules = rulesForConfig({extends: '.eslintrc.yaml'});
@@ -11,7 +16,7 @@ const inheritedDisabledRules = inheritedRules
   .filter(({rule}) => rule === 'off');
 
 test('config has no deprecated rules', t => {
-  const rules = new Rules();
+  const rules = getAllRules();
   const actual = myRules.filter(
     ({name, rule}) => rules.get(name).meta.deprecated && rule !== 'off'
   );

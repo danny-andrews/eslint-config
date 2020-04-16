@@ -6,37 +6,39 @@
     "eslint",
     "eslintconfig"
   ],
-  "license": "MIT",
-  "author": "Danny Andrews",
-  "files": [
-    "rulesets",
-    "*.js"
-  ],
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danny-andrews/eslint-config.git"
   },
+  "license": "MIT",
+  "author": "Danny Andrews",
+  "main": "index.js",
+  "files": [
+    "rulesets",
+    "*.js"
+  ],
   "scripts": {
     "ci": "yarn lint && yarn test",
     "lint": "eslint . && sort-package-json",
     "test": "ava"
   },
   "dependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint-config-eslint": "^4.0.0",
-    "eslint-plugin-import": "^2.14.0"
+    "babel-eslint": "^10.1.0",
+    "eslint-config-eslint": "^6.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsdoc": "^23.0.0",
+    "eslint-plugin-node": "^11.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "ava": "1.0.0-beta.8",
-    "eslint": "^5.4.0",
-    "ramda": "^0.24.1",
-    "sort-package-json": "^1.7.0"
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
+    "ava": "^3.7.0",
+    "eslint": "^6.8.0",
+    "ramda": "^0.27.0",
+    "sort-package-json": "^1.41.0"
   },
   "peerDependencies": {
-    "eslint": "^5.0.0"
+    "eslint": "^6.0.0"
   }
 }
